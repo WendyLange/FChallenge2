@@ -28,6 +28,8 @@ body {
 
 
 .clockdate-wrapper {
+	display: grid;
+	grid-column: 2/3;
     background-color: #333;
     padding:25px;
     max-width:350px;
@@ -95,7 +97,7 @@ body {
 	display: grid;
 	grid-column: 2/3;
 	margin: auto;
-	background-color: yellow;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 	height: 510px;
 	width: 310px;
 	border-radius: 10px;
@@ -123,18 +125,40 @@ body {
 	height: 100%;
 
 	border-radius: 20px;
-	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+	/*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
 }
 
 @keyframes animate{
-	0%
+	
+	0% {
+		transform: linear-gradient(#14ffe9 0deg, #ffeb3b 180deg, #ff00e0 360deg);
+	}
+
+	25% {
+		transform: linear-gradient(#14ffe9 0deg, #ffeb3b 180deg, #ff00e0 360deg);
+	}
+
+	50% {
+		transform: linear-gradient(#14ffe9 0deg, #ffeb3b 180deg, #ff00e0 360deg);
+	}
+
+	75% {
+		transform: linear-gradient(#14ffe9 0deg, #ffeb3b 180deg, #ff00e0 360deg);
+	}
+
+	100% {
+		transform: linear-gradient(#14ffe9 0deg, #ffeb3b 180deg, #ff00e0 360deg);
+	}
+
+
+	/*0%
 	{
 		transform: rotate(0deg);
 	}
 	100%
 	{
 		transform: rotate(360deg);
-	}
+	}*/
 
 }
 
