@@ -1,15 +1,19 @@
-// var today = new Date ();
-// var hourNow = today.getHours();
-// var greeting;
+function displayNextImage() {
+    x = (x === images.length - 1) ? 0 : x + 1;
+    document.getElementById("img").src = images[x];
+}
 
-// if (hourNow > 18) { //6:00 pm
-//   greeting = 'Good afternoon';
-// } else if (hourNow > 12) { //12:00 pm
-//   greeting = 'Good evening';
-// } else if (hourNow > 0) { //12:00 am
-//   greeting = 'Good morning';
-// } else {
-//   greeting = 'Welcome!'; //default option
-// }
+function displayPreviousImage() {
+    x = (x <= 0) ? images.length - 1 : x - 1;
+    document.getElementById("img").src = images[x];
+}
 
-// document.getElementById("greetnow").write('<h3>' + greeting + '</h3>');
+function startImage() {
+    setInterval(displayNextImage, 2000);
+}
+
+var images = [], x = -1;
+images[0] = "images/image1.jpg";
+images[1] = "images/image2.jpg";
+images[2] = "images/image3.jpg";
+images[3] = "images/image4.jpg";
