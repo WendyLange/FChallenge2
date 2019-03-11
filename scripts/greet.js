@@ -1,19 +1,20 @@
-function displayNextImage() {
-    x = (x === images.length - 1) ? 0 : x + 1;
-    document.getElementById("img").src = images[x];
+function getMessage() {
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 5) {
+       document.write("It is early, good morning!");
+      }
+      if (5 <= currentTime&&currentTime < 11) {
+       document.write("Morning, maybe not?");
+      }
+      if (11 <= currentTime&&currentTime < 16) {
+       document.write("It's afternoon here, cup a soup time!");
+      }
+      if (16 <= currentTime&&currentTime < 22) {
+       document.write("<link rel='stylesheet' href='evening.css' type='text/css'>");
+      }
+      if (22 <= currentTime&&currentTime <= 24) {
+       document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+      }
 }
 
-function displayPreviousImage() {
-    x = (x <= 0) ? images.length - 1 : x - 1;
-    document.getElementById("img").src = images[x];
-}
-
-function startImage() {
-    setInterval(displayNextImage, 2000);
-}
-
-var images = [], x = -1;
-images[0] = "images/image1.jpg";
-images[1] = "images/image2.jpg";
-images[2] = "images/image3.jpg";
-images[3] = "images/image4.jpg";
+getMessage();
