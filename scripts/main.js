@@ -48,10 +48,10 @@ window.onload = function () {
               value = "It's afternoon here, cup a soup time!";
         }
         if (16 <= currentTime&&currentTime < 22) {
-              value = '12';
+              value = 'Currently it is evening';
         }
         if (22 <= currentTime&&currentTime <= 24) {
-              value = '24';
+              value = 'It is night, time to go to sleep';
         }
         message.innerHTML = value;
     }
