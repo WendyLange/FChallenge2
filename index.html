@@ -5,31 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
 	<script type="text/javascript" src="scripts/main.js"></script>
-	<script type="text/javascript" src="scripts/greet.js"></script>
-	<script type="text/javascript" src="scripts/text.js"></script>
 	<title>Earth</title>
 </head>
-<body onload="startTime()">
+<body>
 	<div class="wrapper">
 		
-		<div id="clockdate">
+		<div class="back" id="clockdate">
   			<div class="clockdate-wrap">
    				<div id="clock"></div>
     			<div id="date"></div>
   			</div>
 		</div>
 
+		<div class="space2">
+			<p class="message"></p>
+		</div>
+
 		<div class="back">
 			
-			<img onload="startImage()" id="img" src="images/startpicture.jpg">
+			<img onload="" id="img" src="images/startpicture.jpg">
 		</div>
+
+			
 		<div class="space1">
 			<p>Earth is here!</p>
 		</div>
-		<div class="space2">
-			<p onload="getMessage()"></p>
-		</div>		
-		
+		</div>	
 	</div>
 </body>
 </html>
