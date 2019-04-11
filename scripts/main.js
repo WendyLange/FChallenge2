@@ -1,5 +1,7 @@
 window.onload = function () {
+    // Function for the clock to run
     function startTime() {
+        // Details of the clock, date, hour, min
         var today = new Date();
         var hr = today.getHours();
         var min = today.getMinutes();
@@ -11,8 +13,11 @@ window.onload = function () {
         hr = checkTime(hr);
         min = checkTime(min);
         sec = checkTime(sec);
+
+        // Layout of the clock on the website
         document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
         
+        // Show the clock with the correct month and day
         var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         var curWeekDay = days[today.getDay()];
@@ -32,7 +37,7 @@ window.onload = function () {
         return i;
     }
 
-
+    // Message that would be seen on the website according to the time of the day
     function getMessage() {
         var message = document.querySelector('.message');
         var value = '';
@@ -73,6 +78,7 @@ window.onload = function () {
         setInterval(displayNextImage, 2000);
     }
 
+    // Show variation of images on a time span of 2 sec
     var images = [], x = -1;
     images[0] = "images/image1.jpg";
     images[1] = "images/image2.jpg";
